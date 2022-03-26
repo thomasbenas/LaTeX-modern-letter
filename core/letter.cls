@@ -45,20 +45,20 @@
 \fancyhf{}
 
 %page numbering style
-\cfoot{\footnotesize{\basDePage}}
+\cfoot{\color{mainColor} \footnotesize{\basDePage}}
 
 %add of user info
 \input{config.tex}
 
 \def\expediteur{
-    \noindent\nomExp\\
+    \noindent \textbf{\color{mainColor} \nomExp}\\
     \adresseExp,~\cpExp,~\villeExp\\
     \telExp\\
     \mailExp\\
 }
 
 \def\destinataire{
-        \noindent\nomDest\\
+        \textbf{ \color{mainColor} \noindent\nomDest}\\
         \nomEntrpDest\\
         \cpVilleDest\\
 }
@@ -77,7 +77,7 @@
     \end{flushright}
     \vspace{.7cm}
 
-    \textbf{Objet :}~\objet
+    \textbf{\color{mainColor} Objet :}~\objet
 
 }
 
