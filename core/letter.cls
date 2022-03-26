@@ -17,7 +17,8 @@
 \RequirePackage{hyperref}% lien hypertexte dans le doc
 \RequirePackage{changepage}% permet de définir des marges à un élément (entre autre)
 \RequirePackage{eso-pic}% quelques outils utiles à d'autres packages
-\RequirePackage{zi4}% style de l'affichage de code          
+\RequirePackage{zi4}% style de l'affichage de code     
+\RequirePackage[pages=some]{background}     
 
 
 %fonts
@@ -26,6 +27,17 @@
 
 \fontfamily{DejaVuSans}
 \renewcommand{\familydefault}{\sfdefault}
+
+
+\backgroundsetup{
+scale=1,
+color=black,
+opacity=.8,
+angle=0,
+contents={%
+  \includegraphics[width=\paperwidth,height=\paperheight]{assets/background.png}
+  }%
+}
 
 %layout configuration
 \usetikzlibrary{calc}
@@ -44,8 +56,6 @@
 \pagestyle{fancy}
 \fancyhf{}
 
-%page numbering style
-\cfoot{\color{mainColor} \footnotesize{\basDePage}}
 
 %add of user info
 \input{config.tex}
@@ -72,10 +82,10 @@
 
     \begin{flushright}
         \destinataire
-        \vspace{.7cm}
+        \vspace{.5cm}
         \dateLettre
     \end{flushright}
-    \vspace{.7cm}
+    \vspace{.5cm}
 
     \textbf{\color{mainColor} Objet :}~\objet
 
